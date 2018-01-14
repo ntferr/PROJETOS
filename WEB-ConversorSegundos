@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset = "UTF-8" />
+<title>Conversor de segundos</title>
+<style>
+body {
+	background-color: #cccccc;
+	font-family:"Trebuchet MS", Tahoma, Arial, Verdana;
+	font-size:12px;
+	color:#000;
+}
+#todo {
+	position: relative;
+	width: 750px;
+	border: 1px solid black;
+	margin:0px auto;
+	background-color: white;
+}
+#rodape_direita {
+	float: right;
+	width: 200px;
+	text-align: right;
+	margin: 5px 10px 0px 0px;
+}
+#topo {
+	position: relative;
+	width: 746px;
+	height: 100px;
+	border: 2px solid red;
+}
+#meio {
+	position: relative;
+	width: 750px;
+	min-height: 400px;
+	background-color: #eeeeee;
+}
+</style>
+</head>
+<body>
+<div id = "todo">
+	<div id ="">
+		<h1 align = "center">Bem vindo ao conversor de segundos</h1>
+	</div>
+	<div id ="meio">
+		<input type = "text" id = "sseg">
+		<button type="button" onclick="conversor()">Converter</button>
+		<p id="relog">Seu resultado aparece aqui.</p>
+	</div>
+</div>
+<script>
+function conversor() { 
+   var hora, min;
+    var seg = document.getElementById("sseg").value;
+    seg = parseInt(seg);
+    hora = seg / 3600;
+    min = (seg / 60) % 60;
+    seg = seg % 60;
+    hora = parseInt(hora);
+    min = parseInt(min);
+    document.getElementById("relog").innerHTML = "Horas: " + hora + " Minutos: " + min + " Segundos: " + seg;
+}
+</script>
+<footer id ="rodape_direita">
+<p>Copyright&copy; | 2017 - by Nathan Ferreira</p>
+</footer>
+</body>
+</html>
