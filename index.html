@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Média</title>
+        <style>
+            html,
+            body
+            {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            .main
+            {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(129deg, #107dac 50%, #1ebbd7 50%); 
+            }
+            h1,h2,h3,p
+            {
+                color: whitesmoke;
+                font-family: 'Times New Roman', Times, serif;
+                text-shadow: black 2px 2px 2px;
+                text-align: center;
+            }
+            span
+            {
+                color: whitesmoke;
+                text-decoration: solid;
+                text-shadow: black 0.1em 0.1em 0.1em;
+            }
+            input
+            {
+                margin-bottom: 1.2em;
+            }
+            .container
+            {
+                background-color: #0460AB;
+                box-shadow: black 0.2em 0.2em 0.5em;
+                padding: 1.5em 2.5em 2em 2.5em;
+                text-align: center;
+            }
+            .h
+            {
+                padding-bottom: 1.0em;
+            }
+            footer
+            {
+                position: absolute;
+	            bottom: 0;
+            }
+        </style>        
+    </head>
+    <body class="main">
+        <div>
+        <h1>Média</h1>
+        <div class="container">
+            <div>
+                <div>
+                    <span>Nota 1: </span>
+                    <input type="number" id="nota1">
+                </div>
+
+                <div>
+                    <span>Nota 2: </span>
+                    <input type="number" id="nota2">
+                </div>
+
+                <div>
+                    <span>Nota 3: </span>
+                    <input type="number" id="nota3">
+                </div>
+
+                <div>
+                    <span>Nota 4: </span>
+                    <input type="number" id="nota4">
+                </div>
+                
+                <div>                    
+                    <p id="resultado"></p>                    
+                </div>
+                <button type="button" onclick="media()">Calcular</button>
+            </div>
+        </div>
+        <footer>
+            <p>Copyright&copy; | 2020 - by Nathan Ferreira</p>
+        </footer>
+        </div>      
+        <script>           
+            function media()
+            {
+                var nota1, nota2, nota3, nota4;
+
+                nota1 = parseInt(document.getElementById('nota1').value);
+                nota2 = parseInt(document.getElementById('nota2').value);
+                nota3 = parseInt(document.getElementById('nota3').value);
+                nota4 = parseInt(document.getElementById('nota4').value);
+
+                var resultado = 0;
+
+                resultado = (nota1 + nota2 + nota3 + nota4) / 4.00;
+
+                document.getElementById('resultado').innerHTML = resultado;
+            }
+    </script>
+    </body>
+</html>
